@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Large model files
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# Large raw outputs
+benchmarks/raw/
+experiments/
+
+# System
+.DS_Store
+Thumbs.db
+.vscode/
