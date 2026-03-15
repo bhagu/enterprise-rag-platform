@@ -1,33 +1,117 @@
+# ======================================================
 # Python
+# ======================================================
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Virtual environments
+# Compiled extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ======================================================
+# Virtual Environments
+# ======================================================
 venv/
 .venv/
 env/
+ENV/
 rag-env/
-.env/
 
-# Jupyter
+# ======================================================
+# Environment Variables / Secrets
+# ======================================================
+.env
+.env.*
+*.env
+secrets/
+credentials/
+
+# ======================================================
+# Jupyter / Notebooks
+# ======================================================
 .ipynb_checkpoints/
 
+# ======================================================
 # Logs
+# ======================================================
 *.log
+logs/
 
-# Large model files
+# ======================================================
+# ML Model Weights
+# ======================================================
 *.bin
 *.pt
 *.pth
 *.safetensors
+*.gguf
+*.onnx
 
-# Large raw outputs
-benchmarks/raw/
+models/
+checkpoints/
+
+# ======================================================
+# Vector Databases / Indexes
+# ======================================================
+*.faiss
+*.index
+*.index.bin
+*.index.pkl
+
+vector_store/
+faiss_index/
+chroma/
+milvus_data/
+
+# ======================================================
+# Embeddings / Chunk Artifacts
+# ======================================================
+embeddings/
+processed_chunks/
+chunk_store/
+
+# ======================================================
+# Experiment Outputs
+# ======================================================
 experiments/
+benchmarks/
+outputs/
+results/
+tmp/
 
-# System
+# ======================================================
+# Data
+# ======================================================
+data/raw_documents/*
+data/processed_chunks/*
+data/tmp/*
+
+# Allow small example files
+!data/raw_documents/example/
+
+# ======================================================
+# API Keys / Config Overrides
+# ======================================================
+config.local.yaml
+config.dev.yaml
+
+# ======================================================
+# IDE / Editors
+# ======================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ======================================================
+# OS Files
+# ======================================================
 .DS_Store
 Thumbs.db
-.vscode/
