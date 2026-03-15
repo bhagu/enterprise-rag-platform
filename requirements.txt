@@ -1,0 +1,49 @@
+# Core RAG & LLM
+
+langchain
+langchain-community
+langchain-core
+ollama
+
+# Vector Database
+
+faiss-cpu
+
+# Embeddings
+
+sentence-transformers
+
+# API Layer
+
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+# Document Processing
+
+pymupdf
+pypdf
+
+# Data Processing
+
+numpy
+pandas
+
+# Tokenization
+
+tiktoken
+
+# Hybrid Retrieval
+
+rank-bm25
+
+# Utilities
+
+requests
+python-dotenv
+tqdm
+
+# Logging / debugging
+
+loguru
