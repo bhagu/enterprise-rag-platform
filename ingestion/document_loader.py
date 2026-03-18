@@ -15,6 +15,7 @@ Supported file types will later include:
 - HTML
 """
 
+
 from pathlib import Path
 from typing import List, Dict
 
@@ -67,14 +68,17 @@ def main() -> None:
     """
     Example usage for manual testing of the document loader.
     """
+    
     loader = DocumentLoader("../data/raw_documents")
     documents = loader.load_documents()
 
     print(f"Loaded {len(documents)} documents\n")
 
     for doc in documents:
-        print(doc)
+        print(doc)    
+    
 
 
 if __name__ == "__main__":
     main()
+
