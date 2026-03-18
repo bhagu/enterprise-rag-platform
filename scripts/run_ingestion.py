@@ -11,11 +11,11 @@ This script:
 5. Builds FAISS index
 """
 import time
-from ingestion.document_loader import DocumentLoader
-from ingestion.parser_pdf import PDFParser
-from chunking.chunking_engine import ChunkingEngine
-from embeddings.embedding_service import EmbeddingService
-from vector_store.faiss_index import FAISSVectorStore
+from core.ingestion.document_loader import DocumentLoader
+from core.ingestion.parser_pdf import PDFParser
+from core.chunking.chunking_engine import ChunkingEngine
+from core.embeddings.embedding_service import EmbeddingService
+from core.vector_store.faiss_index import FAISSVectorStore
 
 def run_pipeline(data_path: str):
     """
