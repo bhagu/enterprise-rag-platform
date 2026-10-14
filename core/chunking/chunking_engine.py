@@ -13,17 +13,27 @@ class ChunkingEngine:
     """
     Splits parsed documents into chunks for embedding
     """
-
+   
     def __init__(self, chunk_size: int = 300, overlap: int = 50) -> None:
         """
-        Initializes the chunking engine.
+        Initialize the chunking engine.
 
         Args:
-            chunk_size (int): The size of each chunk in tokens.
-            overlap (int): The number of tokens to overlap between chunks.
+            chunk_size: Maximum number of words per chunk.
+            overlap: Number of words shared between adjacent chunks.
         """
+        if chunk_size <= 0:
+            raise ValueError("chunk_size must be greater than zero.")
+
+        if overlap < 0:
+            raise ValueError("overlap cannot be negative.")
+
+        if overlap >= chunk_size:
+            raise ValueError("overlap must be smaller than chunk_size.")
+
         self.chunk_size = chunk_size
         self.overlap = overlap
+
 
     def chunk_document(self, parsed_pages: Dict) -> List[Dict]:
         """

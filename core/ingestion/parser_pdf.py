@@ -18,35 +18,26 @@ class PDFParser:
     PDFParser extracts text and metadata from PDF files.
     """
 
+    
     def parse(self, file_path: str) -> List[Dict]:
         """
         Parse a PDF document and extract page-level text.
-
-        Args:
-            file_path (str): Path to the PDF file.
-
-        Returns:
-            List[Dict]: List of document objects containing
-                        page text and metadata.
         """
-
         parsed_pages = []
 
-        pdf_document = fitz.open(file_path)
+        with fitz.open(file_path) as pdf_document:
+            for page_number, page in enumerate(pdf_document):
+                text = page.get_text()
 
-        for page_number, page in enumerate(pdf_document):
-
-            text = page.get_text()
-
-            parsed_pages.append(
-                {
-                    "text": text,
-                    "metadata": {
-                        "source": Path(file_path).name,
-                        "page": page_number + 1
+                parsed_pages.append(
+                    {
+                        "text": text,
+                        "metadata": {
+                            "source": Path(file_path).name,
+                            "page": page_number + 1,
+                        },
                     }
-                }
-            )
+                )
 
         return parsed_pages
 

@@ -86,6 +86,11 @@ outputs/
 results/
 tmp/
 
+
+# Generated vector-store backups and staging data
+data/vector_store_backup/
+data/vector_store_staging/
+
 # ======================================================
 # Data
 # ======================================================
